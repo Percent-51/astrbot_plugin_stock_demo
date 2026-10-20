@@ -19,17 +19,13 @@
 
 ## 截图
 
-<!--
-截两张图放进来就能显示（现在默认注释掉，避免裂图）：
-  在群里发「小堡股市：行情」「小堡股市：联动」，把返回的卡片分别存成
-  docs/images/quote.png 和 docs/images/linkage.png，
-  然后把下面这段的注释标记去掉。
+**行情卡** —— 发 `小堡股市：行情`
 
-| 行情卡 `小堡股市：行情` | 联动卡 `小堡股市：联动` |
-|---|---|
-| ![行情卡](docs/images/quote.png) | ![联动卡](docs/images/linkage.png) |
+![行情卡](docs/images/quote.png)
 
--->
+**联动卡** —— 发 `小堡股市：联动`。格子里每个数字都是当天的真实计数，数字变绿说明有人在喂这只股
+
+![联动卡](docs/images/linkage.png)
 
 > 卡片由 AstrBot 的 `html_render` 渲染。没有 Playwright 环境时会自动降级为纯文字，功能不受影响。
 
