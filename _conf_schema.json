@@ -1,0 +1,7 @@
+{
+  "group_id": {
+    "description": "启用股市的群号（留空则用 main.py 顶部 GROUP_ID）",
+    "type": "string",
+    "default": ""
+  }
+}

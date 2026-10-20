@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 运行时产物（正常情况下落在 data/plugin_data/，这里兜底防止误提交）
+data/
+render/
+stock.json
+*.log
+.env
