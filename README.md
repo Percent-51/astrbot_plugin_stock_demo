@@ -36,13 +36,13 @@
 ## 快速开始
 
 **方式一：插件市场**（AstrBot ≥ 4.5）
-WebUI → 插件 → 从仓库安装，填 `https://github.com/Percent51/astrbot_plugin_stock_demo`
+WebUI → 插件 → 从仓库安装，填 `https://github.com/Percent-51/astrbot_plugin_stock_demo`
 
 **方式二：手动**
 
 ```bash
 cd <AstrBot 根目录>/data/plugins
-git clone https://github.com/Percent51/astrbot_plugin_stock_demo
+git clone https://github.com/Percent-51/astrbot_plugin_stock_demo
 ```
 
 然后在 WebUI 插件页重载，或重启 AstrBot。

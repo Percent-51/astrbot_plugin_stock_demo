@@ -3,8 +3,8 @@ display_name: 群聊股市
 short_desc: 股价不靠掷骰子，靠群友的真实行为当基本面
 desc: 群聊股市 · 行为联动行情（六只股 / 5 分钟 tick / 随机事件 + 黑天鹅 + 资金面 / 零 LLM 零 token）
 version: v1.0.0
-author: "Percent51"
-repo: https://github.com/Percent51/astrbot_plugin_stock_demo
+author: "Percent-51"
+repo: https://github.com/Percent-51/astrbot_plugin_stock_demo
 support_platforms:
   - aiocqhttp
 astrbot_version: ">=4.5,<5"
