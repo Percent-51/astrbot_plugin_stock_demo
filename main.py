@@ -727,12 +727,15 @@ class StockDemoPlugin(Star):
                 if _is_money and ratio > 3.0:
                     ratio = 3.0 + (ratio - 3.0) * 0.3
                 score = max(SCORE_FLOOR, min(1.4, ratio - NEUTRAL_RATIO)) * float(cfg["vol"])
-                if base <= 1e-9 and (w < 0 or now_v <= 0):
+                if base <= 1e-9:
                     # 无历史（ratio 恒 1.0）时死源真中性：
                     #   负权重源 → 一律 0（v2.9.9 原语义，无基线不该凭空压价）；
                     #   正权重源 → 今日也无量才 0（v2.9.12 补：不再给幻影正分，
                     #   如彩票流水一周没人下注反而 +0.1）；今日有量保留小正分（M4）。
-                    score = 0.0
+                    # v1.1.0：小正分写死 0.10×vol，不再跟着 NEUTRAL_RATIO 走 ——
+                    # 旧写法靠 (ratio−NEUTRAL) 顺带得到 0.10，中性线一降到 0.78 就翻成 0.22，
+                    # 常年无基线的稀疏源等于白送双倍上行动力。
+                    score = 0.0 if (w < 0 or now_v <= 0) else 0.10 * float(cfg["vol"])
                 if night and score < 0:
                     score = 0.0  # v1.9.1 夜间安静区（2-7点）：没人发言不压价
                 fund += w * score
